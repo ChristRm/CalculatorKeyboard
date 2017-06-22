@@ -9,10 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var textField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 250)
+        let keyboard = CalculatorKeyboard(frame: frame)
+        textField.inputView = keyboard
     }
 
     override func didReceiveMemoryWarning() {
