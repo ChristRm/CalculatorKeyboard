@@ -11,9 +11,52 @@
 		9D552C6F1EFAE58A004E5125 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D552C6E1EFAE58A004E5125 /* ViewController.swift */; };
 		9D552C721EFAE58A004E5125 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D552C701EFAE58A004E5125 /* Main.storyboard */; };
 		9D552C771EFAE58A004E5125 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D552C751EFAE58A004E5125 /* LaunchScreen.storyboard */; };
+		9D57267A1EFDA9A000711189 /* ExpressionEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5726791EFDA9A000711189 /* ExpressionEvaluator.swift */; };
 		9D8B90661EFAEAF100A0BDB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D8B90651EFAEAF100A0BDB4 /* Assets.xcassets */; };
 		9D8B90681EFAF63A00A0BDB4 /* CalculatorKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8B90671EFAF63A00A0BDB4 /* CalculatorKeyboard.swift */; };
 		9D8B90701EFB066D00A0BDB4 /* CalculatorKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D8B906F1EFB066D00A0BDB4 /* CalculatorKeyboard.xib */; };
+		9DC4E5641EFEE55D00A8380A /* NumberFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4E5631EFEE55D00A8380A /* NumberFormatterExtension.swift */; };
+		9DE687F71EFEAA8B00B1E7B0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9DE687CC1EFEAA8B00B1E7B0 /* LICENSE */; };
+		9DE687F81EFEAA8B00B1E7B0 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687CE1EFEAA8B00B1E7B0 /* Character.swift */; };
+		9DE687F91EFEAA8B00B1E7B0 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687CF1EFEAA8B00B1E7B0 /* Double.swift */; };
+		9DE687FA1EFEAA8B00B1E7B0 /* DynamicResolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687D01EFEAA8B00B1E7B0 /* DynamicResolution.swift */; };
+		9DE687FB1EFEAA8B00B1E7B0 /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687D11EFEAA8B00B1E7B0 /* Either.swift */; };
+		9DE687FC1EFEAA8B00B1E7B0 /* Evaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687D21EFEAA8B00B1E7B0 /* Evaluator.swift */; };
+		9DE687FD1EFEAA8B00B1E7B0 /* ExponentExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687D31EFEAA8B00B1E7B0 /* ExponentExtractor.swift */; };
+		9DE687FE1EFEAA8B00B1E7B0 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687D41EFEAA8B00B1E7B0 /* Expression.swift */; };
+		9DE687FF1EFEAA8B00B1E7B0 /* Expressionizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687D51EFEAA8B00B1E7B0 /* Expressionizer.swift */; };
+		9DE688001EFEAA8B00B1E7B0 /* ExpressionRewriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687D61EFEAA8B00B1E7B0 /* ExpressionRewriter.swift */; };
+		9DE688011EFEAA8B00B1E7B0 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687D71EFEAA8B00B1E7B0 /* Function.swift */; };
+		9DE688021EFEAA8B00B1E7B0 /* Functions+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687D81EFEAA8B00B1E7B0 /* Functions+Defaults.swift */; };
+		9DE688031EFEAA8B00B1E7B0 /* FunctionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687D91EFEAA8B00B1E7B0 /* FunctionSet.swift */; };
+		9DE688041EFEAA8B00B1E7B0 /* GroupedToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687DA1EFEAA8B00B1E7B0 /* GroupedToken.swift */; };
+		9DE688051EFEAA8B00B1E7B0 /* HexNumberExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687DB1EFEAA8B00B1E7B0 /* HexNumberExtractor.swift */; };
+		9DE688061EFEAA8B00B1E7B0 /* IdentifierExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687DC1EFEAA8B00B1E7B0 /* IdentifierExtractor.swift */; };
+		9DE688071EFEAA8B00B1E7B0 /* LocalizedNumberExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687DD1EFEAA8B00B1E7B0 /* LocalizedNumberExtractor.swift */; };
+		9DE688081EFEAA8B00B1E7B0 /* MathParserErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687DF1EFEAA8B00B1E7B0 /* MathParserErrors.swift */; };
+		9DE688091EFEAA8B00B1E7B0 /* NumberExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687E01EFEAA8B00B1E7B0 /* NumberExtractor.swift */; };
+		9DE6880A1EFEAA8B00B1E7B0 /* OctalNumberExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687E11EFEAA8B00B1E7B0 /* OctalNumberExtractor.swift */; };
+		9DE6880B1EFEAA8B00B1E7B0 /* Operator+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687E21EFEAA8B00B1E7B0 /* Operator+Defaults.swift */; };
+		9DE6880C1EFEAA8B00B1E7B0 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687E31EFEAA8B00B1E7B0 /* Operator.swift */; };
+		9DE6880D1EFEAA8B00B1E7B0 /* OperatorExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687E41EFEAA8B00B1E7B0 /* OperatorExtractor.swift */; };
+		9DE6880E1EFEAA8B00B1E7B0 /* OperatorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687E51EFEAA8B00B1E7B0 /* OperatorSet.swift */; };
+		9DE6880F1EFEAA8B00B1E7B0 /* OperatorTokenSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687E61EFEAA8B00B1E7B0 /* OperatorTokenSet.swift */; };
+		9DE688101EFEAA8B00B1E7B0 /* PeekingIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687E71EFEAA8B00B1E7B0 /* PeekingIterator.swift */; };
+		9DE688111EFEAA8B00B1E7B0 /* QuotedVariableExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687E81EFEAA8B00B1E7B0 /* QuotedVariableExtractor.swift */; };
+		9DE688121EFEAA8B00B1E7B0 /* RawToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687E91EFEAA8B00B1E7B0 /* RawToken.swift */; };
+		9DE688131EFEAA8B00B1E7B0 /* ResolvedToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687EA1EFEAA8B00B1E7B0 /* ResolvedToken.swift */; };
+		9DE688141EFEAA8B00B1E7B0 /* RewriteRule+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687EB1EFEAA8B00B1E7B0 /* RewriteRule+Defaults.swift */; };
+		9DE688151EFEAA8B00B1E7B0 /* RewriteRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687EC1EFEAA8B00B1E7B0 /* RewriteRule.swift */; };
+		9DE688161EFEAA8B00B1E7B0 /* SpecialNumberExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687ED1EFEAA8B00B1E7B0 /* SpecialNumberExtractor.swift */; };
+		9DE688171EFEAA8B00B1E7B0 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687EE1EFEAA8B00B1E7B0 /* String.swift */; };
+		9DE688181EFEAA8B00B1E7B0 /* TokenCharacterBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687EF1EFEAA8B00B1E7B0 /* TokenCharacterBuffer.swift */; };
+		9DE688191EFEAA8B00B1E7B0 /* TokenExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687F01EFEAA8B00B1E7B0 /* TokenExtractor.swift */; };
+		9DE6881A1EFEAA8B00B1E7B0 /* TokenGrouper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687F11EFEAA8B00B1E7B0 /* TokenGrouper.swift */; };
+		9DE6881B1EFEAA8B00B1E7B0 /* TokenIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687F21EFEAA8B00B1E7B0 /* TokenIterator.swift */; };
+		9DE6881C1EFEAA8B00B1E7B0 /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687F31EFEAA8B00B1E7B0 /* Tokenizer.swift */; };
+		9DE6881D1EFEAA8B00B1E7B0 /* TokenResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687F41EFEAA8B00B1E7B0 /* TokenResolver.swift */; };
+		9DE6881E1EFEAA8B00B1E7B0 /* VariableExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687F51EFEAA8B00B1E7B0 /* VariableExtractor.swift */; };
+		9DE6881F1EFEAA8B00B1E7B0 /* README.markdown in Sources */ = {isa = PBXBuildFile; fileRef = 9DE687F61EFEAA8B00B1E7B0 /* README.markdown */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +66,54 @@
 		9D552C711EFAE58A004E5125 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9D552C761EFAE58A004E5125 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D552C781EFAE58A004E5125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D5726791EFDA9A000711189 /* ExpressionEvaluator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionEvaluator.swift; sourceTree = "<group>"; };
 		9D8B90651EFAEAF100A0BDB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D8B90671EFAF63A00A0BDB4 /* CalculatorKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorKeyboard.swift; sourceTree = "<group>"; };
 		9D8B906F1EFB066D00A0BDB4 /* CalculatorKeyboard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorKeyboard.xib; sourceTree = "<group>"; };
+		9DC4E5631EFEE55D00A8380A /* NumberFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberFormatterExtension.swift; sourceTree = "<group>"; };
+		9DE687CC1EFEAA8B00B1E7B0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9DE687CE1EFEAA8B00B1E7B0 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		9DE687CF1EFEAA8B00B1E7B0 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		9DE687D01EFEAA8B00B1E7B0 /* DynamicResolution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicResolution.swift; sourceTree = "<group>"; };
+		9DE687D11EFEAA8B00B1E7B0 /* Either.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Either.swift; sourceTree = "<group>"; };
+		9DE687D21EFEAA8B00B1E7B0 /* Evaluator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evaluator.swift; sourceTree = "<group>"; };
+		9DE687D31EFEAA8B00B1E7B0 /* ExponentExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExponentExtractor.swift; sourceTree = "<group>"; };
+		9DE687D41EFEAA8B00B1E7B0 /* Expression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expression.swift; sourceTree = "<group>"; };
+		9DE687D51EFEAA8B00B1E7B0 /* Expressionizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expressionizer.swift; sourceTree = "<group>"; };
+		9DE687D61EFEAA8B00B1E7B0 /* ExpressionRewriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionRewriter.swift; sourceTree = "<group>"; };
+		9DE687D71EFEAA8B00B1E7B0 /* Function.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
+		9DE687D81EFEAA8B00B1E7B0 /* Functions+Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Functions+Defaults.swift"; sourceTree = "<group>"; };
+		9DE687D91EFEAA8B00B1E7B0 /* FunctionSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionSet.swift; sourceTree = "<group>"; };
+		9DE687DA1EFEAA8B00B1E7B0 /* GroupedToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupedToken.swift; sourceTree = "<group>"; };
+		9DE687DB1EFEAA8B00B1E7B0 /* HexNumberExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexNumberExtractor.swift; sourceTree = "<group>"; };
+		9DE687DC1EFEAA8B00B1E7B0 /* IdentifierExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifierExtractor.swift; sourceTree = "<group>"; };
+		9DE687DD1EFEAA8B00B1E7B0 /* LocalizedNumberExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedNumberExtractor.swift; sourceTree = "<group>"; };
+		9DE687DE1EFEAA8B00B1E7B0 /* MathParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathParser.h; sourceTree = "<group>"; };
+		9DE687DF1EFEAA8B00B1E7B0 /* MathParserErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathParserErrors.swift; sourceTree = "<group>"; };
+		9DE687E01EFEAA8B00B1E7B0 /* NumberExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberExtractor.swift; sourceTree = "<group>"; };
+		9DE687E11EFEAA8B00B1E7B0 /* OctalNumberExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OctalNumberExtractor.swift; sourceTree = "<group>"; };
+		9DE687E21EFEAA8B00B1E7B0 /* Operator+Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Operator+Defaults.swift"; sourceTree = "<group>"; };
+		9DE687E31EFEAA8B00B1E7B0 /* Operator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
+		9DE687E41EFEAA8B00B1E7B0 /* OperatorExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperatorExtractor.swift; sourceTree = "<group>"; };
+		9DE687E51EFEAA8B00B1E7B0 /* OperatorSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperatorSet.swift; sourceTree = "<group>"; };
+		9DE687E61EFEAA8B00B1E7B0 /* OperatorTokenSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperatorTokenSet.swift; sourceTree = "<group>"; };
+		9DE687E71EFEAA8B00B1E7B0 /* PeekingIterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeekingIterator.swift; sourceTree = "<group>"; };
+		9DE687E81EFEAA8B00B1E7B0 /* QuotedVariableExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotedVariableExtractor.swift; sourceTree = "<group>"; };
+		9DE687E91EFEAA8B00B1E7B0 /* RawToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RawToken.swift; sourceTree = "<group>"; };
+		9DE687EA1EFEAA8B00B1E7B0 /* ResolvedToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResolvedToken.swift; sourceTree = "<group>"; };
+		9DE687EB1EFEAA8B00B1E7B0 /* RewriteRule+Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RewriteRule+Defaults.swift"; sourceTree = "<group>"; };
+		9DE687EC1EFEAA8B00B1E7B0 /* RewriteRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewriteRule.swift; sourceTree = "<group>"; };
+		9DE687ED1EFEAA8B00B1E7B0 /* SpecialNumberExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialNumberExtractor.swift; sourceTree = "<group>"; };
+		9DE687EE1EFEAA8B00B1E7B0 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		9DE687EF1EFEAA8B00B1E7B0 /* TokenCharacterBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenCharacterBuffer.swift; sourceTree = "<group>"; };
+		9DE687F01EFEAA8B00B1E7B0 /* TokenExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenExtractor.swift; sourceTree = "<group>"; };
+		9DE687F11EFEAA8B00B1E7B0 /* TokenGrouper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenGrouper.swift; sourceTree = "<group>"; };
+		9DE687F21EFEAA8B00B1E7B0 /* TokenIterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenIterator.swift; sourceTree = "<group>"; };
+		9DE687F31EFEAA8B00B1E7B0 /* Tokenizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tokenizer.swift; sourceTree = "<group>"; };
+		9DE687F41EFEAA8B00B1E7B0 /* TokenResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenResolver.swift; sourceTree = "<group>"; };
+		9DE687F51EFEAA8B00B1E7B0 /* VariableExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariableExtractor.swift; sourceTree = "<group>"; };
+		9DE687F61EFEAA8B00B1E7B0 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
+		9DE688201EFEAABB00B1E7B0 /* NSExpressionPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = NSExpressionPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +146,12 @@
 		9D552C6B1EFAE58A004E5125 /* CalculatorKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				9DC4E5621EFEE54600A8380A /* Common */,
+				9DE687201EFEA78C00B1E7B0 /* 3rd_Party */,
 				9D552C7E1EFAE683004E5125 /* Keyboard */,
 				9D552C6C1EFAE58A004E5125 /* AppDelegate.swift */,
 				9D552C6E1EFAE58A004E5125 /* ViewController.swift */,
+				9DE688201EFEAABB00B1E7B0 /* NSExpressionPlayground.playground */,
 				9D8B90651EFAEAF100A0BDB4 /* Assets.xcassets */,
 				9D552C701EFAE58A004E5125 /* Main.storyboard */,
 				9D552C751EFAE58A004E5125 /* LaunchScreen.storyboard */,
@@ -74,8 +165,82 @@
 			children = (
 				9D8B906F1EFB066D00A0BDB4 /* CalculatorKeyboard.xib */,
 				9D8B90671EFAF63A00A0BDB4 /* CalculatorKeyboard.swift */,
+				9D5726791EFDA9A000711189 /* ExpressionEvaluator.swift */,
 			);
 			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		9DC4E5621EFEE54600A8380A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9DC4E5631EFEE55D00A8380A /* NumberFormatterExtension.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9DE687201EFEA78C00B1E7B0 /* 3rd_Party */ = {
+			isa = PBXGroup;
+			children = (
+				9DE687CB1EFEAA8B00B1E7B0 /* DDMathParser */,
+			);
+			path = 3rd_Party;
+			sourceTree = "<group>";
+		};
+		9DE687CB1EFEAA8B00B1E7B0 /* DDMathParser */ = {
+			isa = PBXGroup;
+			children = (
+				9DE687CC1EFEAA8B00B1E7B0 /* LICENSE */,
+				9DE687CD1EFEAA8B00B1E7B0 /* MathParser */,
+				9DE687F61EFEAA8B00B1E7B0 /* README.markdown */,
+			);
+			path = DDMathParser;
+			sourceTree = "<group>";
+		};
+		9DE687CD1EFEAA8B00B1E7B0 /* MathParser */ = {
+			isa = PBXGroup;
+			children = (
+				9DE687CE1EFEAA8B00B1E7B0 /* Character.swift */,
+				9DE687CF1EFEAA8B00B1E7B0 /* Double.swift */,
+				9DE687D01EFEAA8B00B1E7B0 /* DynamicResolution.swift */,
+				9DE687D11EFEAA8B00B1E7B0 /* Either.swift */,
+				9DE687D21EFEAA8B00B1E7B0 /* Evaluator.swift */,
+				9DE687D31EFEAA8B00B1E7B0 /* ExponentExtractor.swift */,
+				9DE687D41EFEAA8B00B1E7B0 /* Expression.swift */,
+				9DE687D51EFEAA8B00B1E7B0 /* Expressionizer.swift */,
+				9DE687D61EFEAA8B00B1E7B0 /* ExpressionRewriter.swift */,
+				9DE687D71EFEAA8B00B1E7B0 /* Function.swift */,
+				9DE687D81EFEAA8B00B1E7B0 /* Functions+Defaults.swift */,
+				9DE687D91EFEAA8B00B1E7B0 /* FunctionSet.swift */,
+				9DE687DA1EFEAA8B00B1E7B0 /* GroupedToken.swift */,
+				9DE687DB1EFEAA8B00B1E7B0 /* HexNumberExtractor.swift */,
+				9DE687DC1EFEAA8B00B1E7B0 /* IdentifierExtractor.swift */,
+				9DE687DD1EFEAA8B00B1E7B0 /* LocalizedNumberExtractor.swift */,
+				9DE687DE1EFEAA8B00B1E7B0 /* MathParser.h */,
+				9DE687DF1EFEAA8B00B1E7B0 /* MathParserErrors.swift */,
+				9DE687E01EFEAA8B00B1E7B0 /* NumberExtractor.swift */,
+				9DE687E11EFEAA8B00B1E7B0 /* OctalNumberExtractor.swift */,
+				9DE687E21EFEAA8B00B1E7B0 /* Operator+Defaults.swift */,
+				9DE687E31EFEAA8B00B1E7B0 /* Operator.swift */,
+				9DE687E41EFEAA8B00B1E7B0 /* OperatorExtractor.swift */,
+				9DE687E51EFEAA8B00B1E7B0 /* OperatorSet.swift */,
+				9DE687E61EFEAA8B00B1E7B0 /* OperatorTokenSet.swift */,
+				9DE687E71EFEAA8B00B1E7B0 /* PeekingIterator.swift */,
+				9DE687E81EFEAA8B00B1E7B0 /* QuotedVariableExtractor.swift */,
+				9DE687E91EFEAA8B00B1E7B0 /* RawToken.swift */,
+				9DE687EA1EFEAA8B00B1E7B0 /* ResolvedToken.swift */,
+				9DE687EB1EFEAA8B00B1E7B0 /* RewriteRule+Defaults.swift */,
+				9DE687EC1EFEAA8B00B1E7B0 /* RewriteRule.swift */,
+				9DE687ED1EFEAA8B00B1E7B0 /* SpecialNumberExtractor.swift */,
+				9DE687EE1EFEAA8B00B1E7B0 /* String.swift */,
+				9DE687EF1EFEAA8B00B1E7B0 /* TokenCharacterBuffer.swift */,
+				9DE687F01EFEAA8B00B1E7B0 /* TokenExtractor.swift */,
+				9DE687F11EFEAA8B00B1E7B0 /* TokenGrouper.swift */,
+				9DE687F21EFEAA8B00B1E7B0 /* TokenIterator.swift */,
+				9DE687F31EFEAA8B00B1E7B0 /* Tokenizer.swift */,
+				9DE687F41EFEAA8B00B1E7B0 /* TokenResolver.swift */,
+				9DE687F51EFEAA8B00B1E7B0 /* VariableExtractor.swift */,
+			);
+			path = MathParser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +307,7 @@
 				9D8B90661EFAEAF100A0BDB4 /* Assets.xcassets in Resources */,
 				9D8B90701EFB066D00A0BDB4 /* CalculatorKeyboard.xib in Resources */,
 				9D552C721EFAE58A004E5125 /* Main.storyboard in Resources */,
+				9DE687F71EFEAA8B00B1E7B0 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,9 +318,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DE687FB1EFEAA8B00B1E7B0 /* Either.swift in Sources */,
+				9DE6881B1EFEAA8B00B1E7B0 /* TokenIterator.swift in Sources */,
+				9DE6880B1EFEAA8B00B1E7B0 /* Operator+Defaults.swift in Sources */,
+				9DE6881E1EFEAA8B00B1E7B0 /* VariableExtractor.swift in Sources */,
+				9DE6880C1EFEAA8B00B1E7B0 /* Operator.swift in Sources */,
+				9DE687FF1EFEAA8B00B1E7B0 /* Expressionizer.swift in Sources */,
+				9DE687FD1EFEAA8B00B1E7B0 /* ExponentExtractor.swift in Sources */,
+				9DE688161EFEAA8B00B1E7B0 /* SpecialNumberExtractor.swift in Sources */,
 				9D552C6F1EFAE58A004E5125 /* ViewController.swift in Sources */,
+				9DE687FA1EFEAA8B00B1E7B0 /* DynamicResolution.swift in Sources */,
+				9DE688071EFEAA8B00B1E7B0 /* LocalizedNumberExtractor.swift in Sources */,
+				9DE688141EFEAA8B00B1E7B0 /* RewriteRule+Defaults.swift in Sources */,
+				9DE688111EFEAA8B00B1E7B0 /* QuotedVariableExtractor.swift in Sources */,
 				9D8B90681EFAF63A00A0BDB4 /* CalculatorKeyboard.swift in Sources */,
+				9DE688001EFEAA8B00B1E7B0 /* ExpressionRewriter.swift in Sources */,
+				9DE6880F1EFEAA8B00B1E7B0 /* OperatorTokenSet.swift in Sources */,
+				9DE687FE1EFEAA8B00B1E7B0 /* Expression.swift in Sources */,
+				9DE6880E1EFEAA8B00B1E7B0 /* OperatorSet.swift in Sources */,
+				9DE688091EFEAA8B00B1E7B0 /* NumberExtractor.swift in Sources */,
+				9DE688081EFEAA8B00B1E7B0 /* MathParserErrors.swift in Sources */,
+				9DE688181EFEAA8B00B1E7B0 /* TokenCharacterBuffer.swift in Sources */,
+				9DE688021EFEAA8B00B1E7B0 /* Functions+Defaults.swift in Sources */,
+				9DE6881F1EFEAA8B00B1E7B0 /* README.markdown in Sources */,
+				9DC4E5641EFEE55D00A8380A /* NumberFormatterExtension.swift in Sources */,
+				9DE687F81EFEAA8B00B1E7B0 /* Character.swift in Sources */,
+				9DE6881C1EFEAA8B00B1E7B0 /* Tokenizer.swift in Sources */,
+				9DE688061EFEAA8B00B1E7B0 /* IdentifierExtractor.swift in Sources */,
+				9DE688191EFEAA8B00B1E7B0 /* TokenExtractor.swift in Sources */,
+				9DE688131EFEAA8B00B1E7B0 /* ResolvedToken.swift in Sources */,
+				9DE688011EFEAA8B00B1E7B0 /* Function.swift in Sources */,
+				9DE6881D1EFEAA8B00B1E7B0 /* TokenResolver.swift in Sources */,
+				9DE688101EFEAA8B00B1E7B0 /* PeekingIterator.swift in Sources */,
 				9D552C6D1EFAE58A004E5125 /* AppDelegate.swift in Sources */,
+				9DE688121EFEAA8B00B1E7B0 /* RawToken.swift in Sources */,
+				9DE6880D1EFEAA8B00B1E7B0 /* OperatorExtractor.swift in Sources */,
+				9DE688041EFEAA8B00B1E7B0 /* GroupedToken.swift in Sources */,
+				9DE687F91EFEAA8B00B1E7B0 /* Double.swift in Sources */,
+				9D57267A1EFDA9A000711189 /* ExpressionEvaluator.swift in Sources */,
+				9DE688171EFEAA8B00B1E7B0 /* String.swift in Sources */,
+				9DE688031EFEAA8B00B1E7B0 /* FunctionSet.swift in Sources */,
+				9DE6880A1EFEAA8B00B1E7B0 /* OctalNumberExtractor.swift in Sources */,
+				9DE687FC1EFEAA8B00B1E7B0 /* Evaluator.swift in Sources */,
+				9DE6881A1EFEAA8B00B1E7B0 /* TokenGrouper.swift in Sources */,
+				9DE688151EFEAA8B00B1E7B0 /* RewriteRule.swift in Sources */,
+				9DE688051EFEAA8B00B1E7B0 /* HexNumberExtractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +486,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4E7UQ9G3LU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CalculatorKeyboard/3rd_Party",
+				);
 				INFOPLIST_FILE = CalculatorKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -292,6 +504,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4E7UQ9G3LU;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CalculatorKeyboard/3rd_Party",
+				);
 				INFOPLIST_FILE = CalculatorKeyboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
