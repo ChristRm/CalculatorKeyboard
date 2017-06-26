@@ -12,7 +12,7 @@ extension NumberFormatter {
     static func formatterWithSeparator(_ separator: String) -> NumberFormatter {
         let formatter = NumberFormatter()
         formatter.groupingSeparator = separator
-        formatter.numberStyle = .decimal
+        formatter.maximumIntegerDigits = 100
         return formatter
     }
 }

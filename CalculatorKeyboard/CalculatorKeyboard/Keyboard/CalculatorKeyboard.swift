@@ -8,9 +8,18 @@
 
 import UIKit
 
+protocol CalculatorProcessing {
+    var output: String { get }
+    var canBeEvaluated: Bool { get }
+    
+    func setExpression(_ expression: String)
+    
+    func evaluateExpression(_ invalidate: Bool) -> Bool
+}
+
 protocol CalculatorKeyboardDelegate: class {
-    func calculatorKeyboard(_ calculatorKeyboard: CalculatorKeyboard, didChange output: String)
-    func calculatorKeyboardDidFail(_ calculatorKeyboard: CalculatorKeyboard)
+     func calculatorKeyboardDidCalculate(_ calculatorKeyboard: CalculatorKeyboard)
+     func calculatorKeyboardDidFailCalculate(_ calculatorKeyboard: CalculatorKeyboard)
 }
 
 class CalculatorKeyboard: UIView, UITextFieldDelegate {
@@ -37,17 +46,25 @@ class CalculatorKeyboard: UIView, UITextFieldDelegate {
     }
     
     // MARK: - Properties
-    let expressionEvaluator = ExpressionEvaluator()
     
     weak var delegate: CalculatorKeyboardDelegate?
     
-    public required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    fileprivate(set) weak var currentTextField: UITextField?
+    var processor: CalculatorProcessing?
+    
+    //MARK: - IBOutlets
+    @IBOutlet fileprivate weak var equalButton: UIButton!
+    
+    // MARK: - Inits
+    
+    init(frame: CGRect, processor: CalculatorProcessing) {
+        self.processor = processor
+        super.init(frame: frame)
         commonInit()
     }
     
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
         commonInit()
     }
     
@@ -55,7 +72,47 @@ class CalculatorKeyboard: UIView, UITextFieldDelegate {
         let view = loadViewFromNib()
         view.frame = bounds
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.translatesAutoresizingMaskIntoConstraints = true
         addSubview(view)
+    }
+    
+    //MARK: - IBAction
+    
+    @IBAction fileprivate func buttonTouched(_ sender: Any) {
+        if let button = sender as? UIButton {
+            switch button.tag {
+            case CalculatorKey.delete.rawValue:
+                currentTextField?.deleteBackward()
+                break
+                
+            case CalculatorKey.clear.rawValue:
+                currentTextField?.text = ""
+                break
+                
+            case CalculatorKey.equal.rawValue:
+                returnPressed()
+                break
+                
+            default:
+                if let text = button.titleLabel?.text {
+                    currentTextField?.insertText(text)
+                }
+                break
+            }
+            
+            guard let processor = processor else { return }
+            
+            processor.setExpression(convertSymbolsForProcessor(currentTextField?.text ?? ""))
+            currentTextField?.text = convertSymbolsFromProcessor(processor.output)
+            updateEqualButton()
+        }
+    }
+    
+    fileprivate func updateEqualButton() {
+        guard let processor = processor else { return }
+        
+        let title = processor.canBeEvaluated ? "=" : "Ready"
+        equalButton.setTitle(title, for: .normal)
     }
     
     fileprivate func loadViewFromNib() -> UIView {
@@ -65,37 +122,60 @@ class CalculatorKeyboard: UIView, UITextFieldDelegate {
         return view ?? UIView()
     }
     
-    @IBAction fileprivate func buttonTouched(_ sender: Any) {
-        if let button = sender as? UIButton {
-            switch button.tag {
-            case CalculatorKey.delete.rawValue:
-                expressionEvaluator.removeLastCharacter()
-                break
-                
-            case CalculatorKey.clear.rawValue:
-                //expressionEvaluator.
-                break
-                
-            case CalculatorKey.equal.rawValue:
-                let success = expressionEvaluator.evaluateExpression()
-                print("success \(success)")
-                break
-                
-            default:
-                if let text = button.titleLabel?.text {
-                    expressionEvaluator.addInput(text)
-                }
-                break
-            }            
+    fileprivate func returnPressed() {
+        guard let processor = processor else { currentTextField?.endEditing(true); return }
+        
+        if processor.canBeEvaluated {
+            evaluateExpression(false)
+        } else {
+            currentTextField?.endEditing(true)
+        }
+    }
+    
+    fileprivate func evaluateExpression(_ invalidate: Bool) {
+        guard let processor = processor else { return }
+        
+        let success = processor.evaluateExpression(invalidate)
+        if success {
+            delegate?.calculatorKeyboardDidCalculate(self)
+        } else {
+            delegate?.calculatorKeyboardDidFailCalculate(self)
         }
         
-        delegate?.calculatorKeyboard(self, didChange: expressionEvaluator.expression)
+        currentTextField?.text = processor.output
+    }
+    
+    fileprivate func convertSymbolsForProcessor(_ inputString: String) -> String {
+        var result = inputString
+        result = result.replacingOccurrences(of: "÷", with: "/")
+        result = result.replacingOccurrences(of: "×", with: "*")
+        result = result.replacingOccurrences(of: "−", with: "-")
+        return result
+    }
+    
+    fileprivate func convertSymbolsFromProcessor(_ outputString: String) -> String {
+        var result = outputString
+        result = result.replacingOccurrences(of: "/", with: "÷")
+        result = result.replacingOccurrences(of: "*", with: "×")
+        result = result.replacingOccurrences(of: "-", with: "−")
+        return result
     }
     
     // MARK: - UITextFieldDelegate
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        expressionEvaluator.expression = string
-        return true
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        currentTextField = textField
+        
+        guard let processor = processor else { return }
+        processor.setExpression(convertSymbolsForProcessor(textField.text ?? ""))
+        updateEqualButton()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        evaluateExpression(true)
+        currentTextField = nil
+        
+        guard let processor = processor else { return }
+        processor.setExpression("")
     }
 }
