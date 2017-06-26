@@ -11,6 +11,7 @@ import Foundation
 class CalculatorProcessor: CalculatorProcessing {
     enum Defaults {
         static let enabledCharactersSet = CharacterSet(charactersIn: "0123456789+-*/.")
+        static let maximumNumberLength = 13
         static let roundPrecission: Double = 10000
     }
     
@@ -128,15 +129,10 @@ class CalculatorProcessor: CalculatorProcessing {
                 }
             }
             
-            let numberFormatter = NumberFormatter()
-            numberFormatter.maximumIntegerDigits = 100
-            
-            if let number = numberFormatter.number(from: intPartString as String) {
-                if let formattedNumber = NumberFormatter.formatterWithSeparator(separator).string(from: number) {
-                    nsStringResultExpression = nsStringResultExpression.replacingOccurrences(of: ".", with: "", options: [],
-                                                                                             range: floatPartRange) as NSString
-                    resultExpression = nsStringResultExpression.replacingCharacters(in: intPartRange, with: formattedNumber)
-                }
+            if let formattedNumber = formatNumber(intPartString, with: ",") {
+                nsStringResultExpression = nsStringResultExpression.replacingOccurrences(of: ".", with: "", options: [],
+                                                                                         range: floatPartRange) as NSString
+                resultExpression = nsStringResultExpression.replacingCharacters(in: intPartRange, with: formattedNumber)
             }
         }
         
@@ -149,5 +145,17 @@ class CalculatorProcessor: CalculatorProcessing {
             return numberFindExpression.matches(in: expression, options: [], range: NSRange(location: 0, length: expression.characters.count))
         } catch { }
         return []
+    }
+    
+    fileprivate func formatNumber(_ number: NSString, with separator: String) -> String? {
+        let numberFormatter = NumberFormatter()
+        let cuttedNumber = number.substring(with: NSRange(location: 0,
+                                                          length: number.length > Defaults.maximumNumberLength ? Defaults.maximumNumberLength : number.length))
+        
+        if let number = numberFormatter.number(from: cuttedNumber) {
+            return NumberFormatter.formatterWithSeparator(separator).string(from: number)
+        } else {
+            return nil
+        }
     }
 }
